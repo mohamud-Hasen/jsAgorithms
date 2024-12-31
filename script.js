@@ -83,29 +83,53 @@
 //   console.log("you need get some rest");
 // }
 
-let day = 7;
-switch (day) {
-  case 1:
-    console.log("monday");
-    break;
-  case 2:
-    log("tuesday");
-    break;
-  case 3:
-    console.log("wednesday");
-    break;
-  case 4:
-    console.log("thursday");
-    break;
-  case 5:
-    console.log("friday");
-    break;
-  case 6:
-    console.log("saturday");
-    break;
-  case 7:
-    console.log("sunday");
-    break;
-  default:
-    console.log("invalid day");
-}
+// let day = 7;
+// switch (day) {
+//   case 1:
+//     console.log("monday");
+//     break;
+//   case 2:
+//     log("tuesday");
+//     break;
+//   case 3:
+//     console.log("wednesday");
+//     break;
+//   case 4:
+//     console.log("thursday");
+//     break;
+//   case 5:
+//     console.log("friday");
+//     break;
+//   case 6:
+//     console.log("saturday");
+//     break;
+//   case 7:
+//     console.log("sunday");
+//     break;
+//   default:
+//     console.log("invalid day");
+// }
+
+//while loop
+// let count = 1;
+// while (count <= 4) {
+//   console.log(count);
+//   count++;
+// }
+// function outerFunction() {
+//   let count = 0;
+//   return function innerFunction() {
+//     count++;
+//     return count;
+//   };
+// }
+// const increment = outerFunction();
+// console.log(increment()); // 1
+// console.log(increment()); // 2
+// console.log(increment()); // 3
+// console.log(increment()); // 4
+// console.log(increment()); // 5
+// console.log(increment()); // 6
+
+let heading = document.getElementById("heading");
+console.log("heading.innerHTML");
