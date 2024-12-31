@@ -1,0 +1,51 @@
+/* 
+  .container {
+    display: flex;
+    height: 200px;
+    background: lightgray;
+  }
+
+  .box {
+    background: lightblue;
+    margin: 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box1 {
+    flex: 1; /* Grows to fill available space */
+  
+
+  .box2 {
+    flex: 2; /* Grows twice as much as box1 */
+  }
+
+  .box3 {
+    flex: 2; /* Grows equally with box1 */
+  }
+  /* responsive */
+  @media (max-width: 768px) {
+    body {
+      font-size: 15px;
+      background-color: red; 
+    }
+  }
+  @media (max-width: 480px) {
+    body {
+      font-size: 12px;
+      background-color: rgb(97, 12, 246);
+     
+    }
+    .container{
+      display: flex;
+      flex-direction: column;
+    }
+    .container .box1{
+      background-color: aliceblue;
+      color: black;
+    }
+  }
+    
+   
