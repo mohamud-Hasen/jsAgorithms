@@ -131,5 +131,26 @@
 // console.log(increment()); // 5
 // console.log(increment()); // 6
 
-let heading = document.getElementById("heading");
-console.log("heading.innerHTML");
+// let heading = document.getElementById("heading");
+// console.log("heading.innerHTML");
+
+//js functions declarations
+function greeting(name) {
+  return `Hello ${name}`;
+}
+//console.log(greeting("ali"));
+
+// function expression
+const square = function (number) {
+  return number * number;
+};
+//console.log(square(5));
+
+// arrow functions
+const multiply = (a, b) => a * b;
+//console.log(multiply(3, 3));
+
+// anonymous functions  mostly used in callbacks
+setTimeOut(function () {
+  console.log("this is delayed in 2 seconds");
+}, 2000);
