@@ -152,5 +152,5 @@ const multiply = (a, b) => a * b;
 
 // anonymous functions  mostly used in callbacks
 setTimeOut(function () {
-  console.log("this is delayed in 2 seconds");
+  //console.log("this is delayed in 2 seconds");
 }, 2000);
