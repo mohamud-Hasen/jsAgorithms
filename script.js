@@ -155,7 +155,19 @@
 //   //console.log("this is delayed in 2 seconds");
 // }, 2000);
 
-function sum(num1, num2) {
-  return num1 + num2;
+function calculateLateFee(overdueDays) {
+  const feePerDay = 0.25;
+  const totalFee = overdueDays * feePerDay;
+  return totalFee.toFixed(2);
 }
-console.log(sum(6, 2));
+
+input = process.argv[2];
+const overdueDays = Number(input);
+
+if (isNaN(overdueDays) || overdueDays < 0) {
+  console.log("Please enter a valid number of overdue days.");
+} else {
+  const lateFee = calculateLateFee(overdueDays);
+  console.log(`The late fee is $${lateFee}.`);
+}
+console.log(calculateLateFee(6));
