@@ -155,19 +155,40 @@
 //   //console.log("this is delayed in 2 seconds");
 // }, 2000);
 
-function calculateLateFee(overdueDays) {
-  const feePerDay = 0.25;
-  const totalFee = overdueDays * feePerDay;
-  return totalFee.toFixed(2);
+// function calculateLateFee(overdueDays) {
+//   const feePerDay = 0.25;
+//   const totalFee = overdueDays * feePerDay;
+//   return totalFee.toFixed(2);
+// }
+
+// input = process.argv[2];
+// const overdueDays = Number(input);
+
+// if (isNaN(overdueDays) || overdueDays < 0) {
+//   console.log("Please enter a valid number of overdue days.");
+// } else {
+//   const lateFee = calculateLateFee(overdueDays);
+//   console.log(`The late fee is $${lateFee}.`);
+// }
+// console.log(calculateLateFee(6));
+
+function findColorMeaning() {
+  // Prompt the user for their favorite color
+  const color = "red";
+
+  // Use if-else statements to determine the meaning of the color
+  if (color === "blue") {
+    console.log("Blue: You love calm and peace.");
+  } else if (color === "red") {
+    console.log("Red: You are passionate and bold.");
+  } else if (color === "green") {
+    console.log("Green: You are connected to nature.");
+  } else if (color === "yellow") {
+    console.log("Yellow: You radiate happiness and energy.");
+  } else {
+    console.log("That's a unique choice!");
+  }
 }
 
-input = process.argv[2];
-const overdueDays = Number(input);
-
-if (isNaN(overdueDays) || overdueDays < 0) {
-  console.log("Please enter a valid number of overdue days.");
-} else {
-  const lateFee = calculateLateFee(overdueDays);
-  console.log(`The late fee is $${lateFee}.`);
-}
-console.log(calculateLateFee(6));
+// Call the function to start the game
+findColorMeaning();
