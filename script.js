@@ -209,19 +209,30 @@ findColorMeaning();
 // }
 
 // console.log(calculateLateFee(6));
-function calculateLateFees(overDueDays) {
-  const feesPerDay = 0.25;
+// function calculateLateFees(overDueDays) {
+//   const feesPerDay = 0.25;
 
-  const totalFees = feesPerDay * overDueDays;
-  return totalFees.toFixed(2);
-}
+//   const totalFees = feesPerDay * overDueDays;
+//   return totalFees.toFixed(2);
+// }
 
-const input = process.argv[2];
-const overDueDays = Number(input);
-if (isNaN(overDueDays) || overDueDays < 0) {
-  console.log("please provide a valid over due days");
-} else {
-  const lateFee = calculateLateFees(overDueDays);
-  console.log(`the late fee is $${lateFee}`);
-}
-console.log(calculateLateFees(10));
+// const input = process.argv[2];
+// const overDueDays = Number(input);
+// if (isNaN(overDueDays) || overDueDays < 0) {
+//   console.log("please provide a valid over due days");
+// } else {
+//   const lateFee = calculateLateFees(overDueDays);
+//   console.log(`the late fee is $${lateFee}`);
+// }
+// console.log(calculateLateFees(10));
+
+// function logCase(clientName, caseNumber) {
+//   return `case#${caseNumber}: ${clientName}'s case is now logged`;
+// }
+// console.log(logCase("johm", 12345));
+
+const logCase = (clientName, caseNumber) => {
+  return `case#${caseNumber}: ${clientName}'s case is now logged`;
+};
+
+console.log(logCase("ali", 32324));
