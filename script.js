@@ -172,40 +172,56 @@
 // }
 // console.log(calculateLateFee(6));
 
-// function findColorMeaning() {
-//   // Prompt the user for their favorite color
-//   const color = "red";
+function findColorMeaning() {
+  // Prompt the user for their favorite color
+  const color = "purple";
 
-//   // Use if-else statements to determine the meaning of the color
-//   if (color === "blue") {
-//     console.log("Blue: You love calm and peace.");
-//   } else if (color === "red") {
-//     console.log("Red: You are passionate and bold.");
-//   } else if (color === "green") {
-//     console.log("Green: You are connected to nature.");
-//   } else if (color === "yellow") {
-//     console.log("Yellow: You radiate happiness and energy.");
-//   } else {
-//     console.log("That's a unique choice!");
-//   }
-// }
-
-// findColorMeaning();
-
-const calculateLateFee = function (overdueDays) {
-  const feePerDay = 0.25;
-  const totalFee = overdueDays * feePerDay;
-  return totalFee.toFixed(2);
-};
-
-const input = process.argv[2];
-const overdueDays = Number(input);
-
-if (isNaN(overdueDays) || overdueDays < 0) {
-  console.log("Please enter a valid number of overdue days.");
-} else {
-  const lateFee = calculateLateFee(overdueDays);
-  console.log(`The late fee is $${lateFee}.`);
+  // Use if-else statements to determine the meaning of the color
+  if (color === "blue") {
+    console.log("Blue: You love calm and peace.");
+  } else if (color === "red") {
+    console.log("Red: You are passionate and bold.");
+  } else if (color === "green") {
+    console.log("Green: You are connected to nature.");
+  } else if (color === "yellow") {
+    console.log("Yellow: You radiate happiness and energy.");
+  } else {
+    console.log("That's a unique choice!");
+  }
 }
 
-console.log(calculateLateFee(6));
+findColorMeaning();
+
+// const calculateLateFee = function (overdueDays) {
+//   const feePerDay = 0.25;
+//   const totalFee = overdueDays * feePerDay;
+//   return totalFee.toFixed(2);
+// };
+
+// const input = process.argv[2];
+// const overdueDays = Number(input);
+
+// if (isNaN(overdueDays) || overdueDays < 0) {
+//   console.log("Please enter a valid number of overdue days.");
+// } else {
+//   const lateFee = calculateLateFee(overdueDays);
+//   console.log(`The late fee is $${lateFee}.`);
+// }
+
+// console.log(calculateLateFee(6));
+function calculateLateFees(overDueDays) {
+  const feesPerDay = 0.25;
+
+  const totalFees = feesPerDay * overDueDays;
+  return totalFees.toFixed(2);
+}
+
+const input = process.argv[2];
+const overDueDays = Number(input);
+if (isNaN(overDueDays) || overDueDays < 0) {
+  console.log("please provide a valid over due days");
+} else {
+  const lateFee = calculateLateFees(overDueDays);
+  console.log(`the late fee is $${lateFee}`);
+}
+console.log(calculateLateFees(10));
