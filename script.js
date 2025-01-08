@@ -172,25 +172,25 @@
 // }
 // console.log(calculateLateFee(6));
 
-function findColorMeaning() {
-  // Prompt the user for their favorite color
-  const color = "purple";
+// function findColorMeaning() {
+//   // Prompt the user for their favorite color
+//   const color = "purple";
 
-  // Use if-else statements to determine the meaning of the color
-  if (color === "blue") {
-    console.log("Blue: You love calm and peace.");
-  } else if (color === "red") {
-    console.log("Red: You are passionate and bold.");
-  } else if (color === "green") {
-    console.log("Green: You are connected to nature.");
-  } else if (color === "yellow") {
-    console.log("Yellow: You radiate happiness and energy.");
-  } else {
-    console.log("That's a unique choice!");
-  }
-}
+//   // Use if-else statements to determine the meaning of the color
+//   if (color === "blue") {
+//     console.log("Blue: You love calm and peace.");
+//   } else if (color === "red") {
+//     console.log("Red: You are passionate and bold.");
+//   } else if (color === "green") {
+//     console.log("Green: You are connected to nature.");
+//   } else if (color === "yellow") {
+//     console.log("Yellow: You radiate happiness and energy.");
+//   } else {
+//     console.log("That's a unique choice!");
+//   }
+// }
 
-findColorMeaning();
+// findColorMeaning();
 
 // const calculateLateFee = function (overdueDays) {
 //   const feePerDay = 0.25;
@@ -231,8 +231,37 @@ findColorMeaning();
 // }
 // console.log(logCase("johm", 12345));
 
-const logCase = (clientName, caseNumber) => {
-  return `case#${caseNumber}: ${clientName}'s case is now logged`;
+// const logCase = (clientName, caseNumber) => {
+//   return `case#${caseNumber}: ${clientName}'s case is now logged`;
+// };
+
+// console.log(logCase("ali", 32324));
+
+const calculateAverage = (score1, score2, score3) => {
+  return (score1 + score2 + score3) / 3;
+};
+const determineGrade = (average) => {
+  if (average >= 90) {
+    return "A";
+  } else if (average >= 80) {
+    return "B";
+  } else if (average >= 70) {
+    return "C";
+  } else {
+    return "F";
+  }
 };
 
-console.log(logCase("ali", 32324));
+const generateReport = (studentName, score1, score2, score3) => {
+  const average = calculateAverage(score1, score2, score3);
+  const letterGrade = determineGrade(average);
+  return `${studentName} - average score: ${average.toFixed(
+    2
+  )}, Grade: ${letterGrade}`;
+};
+const studentName = "amina";
+const score1 = 85;
+const score2 = 90;
+const score3 = 78;
+
+console.log(generateReport(studentName, score1, score2, score3));
