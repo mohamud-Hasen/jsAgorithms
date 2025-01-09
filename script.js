@@ -359,37 +359,79 @@
 //   }
 // }
 
-let day = 8;
-switch (day) {
-  case 1:
-    console.log("monday");
+// let day = 8;
+// switch (day) {
+//   case 1:
+//     console.log("monday");
 
-    break;
-  case 2:
-    console.log("tuesday");
+//     break;
+//   case 2:
+//     console.log("tuesday");
 
-    break;
-  case 3:
-    console.log("wednesday");
+//     break;
+//   case 3:
+//     console.log("wednesday");
 
-    break;
-  case 4:
-    console.log("thursday");
+//     break;
+//   case 4:
+//     console.log("thursday");
 
-    break;
-  case 5:
-    console.log("friday");
+//     break;
+//   case 5:
+//     console.log("friday");
 
-    break;
-  case 6:
-    console.log("saturday");
+//     break;
+//   case 6:
+//     console.log("saturday");
 
-    break;
-  case 7:
-    console.log("sunday");
+//     break;
+//   case 7:
+//     console.log("sunday");
 
-    break;
+//     break;
 
-  default:
-    console.log("invalid day");
+//   default:
+//     console.log("invalid day");
+// }
+
+// const calculateLateFee = function (overdueDays) {
+//   const feePerDay = 0.25;
+//   const totalFee = overdueDays * feePerDay;
+//   return totalFee.toFixed(2);
+// };
+
+// const input = process.argv[2];
+// const overdueDays = Number(input);
+
+// if (isNaN(overdueDays) || overdueDays < 0) {
+//   console.log("Please enter a valid number of overdue days.");
+// } else {
+//   const lateFee = calculateLateFee(overdueDays);
+//   console.log(`The late fee is $${lateFee}.`);
+// }
+
+// //console.log(calculateLateFee(6));
+
+const calculateLateFee = function (overdueDays) {
+  const feePerDay = 0.25; // Fee per day in dollars
+  const totalFee = overdueDays * feePerDay;
+  return totalFee.toFixed(2); // Format the result to 2 decimal places
+};
+
+const input = process.argv[2]; // Input from the command line
+const overdueDays = Number(input); // Convert input to a number
+
+if (input === undefined || isNaN(overdueDays) || overdueDays < 0) {
+  // Handle invalid input or missing argument
+  console.log("Please enter a valid number of overdue days.");
+} else if (overdueDays === 0) {
+  // Handle zero overdue days
+  console.log("There are no overdue days. No late fee is applied.");
+} else {
+  // Handle valid overdue days
+  const lateFee = calculateLateFee(overdueDays);
+  console.log(`The late fee for ${overdueDays} overdue day(s) is $${lateFee}.`);
 }
+
+// Remove or comment this line for production
+console.log(calculateLateFee(6));
