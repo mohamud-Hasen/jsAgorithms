@@ -41,28 +41,28 @@
 //   );
 // }
 
-const degreeSymbol = "\u00b0";
-let celsius = 10;
-let fahrenheit = ((celsius + 32) * 5) / 9;
-if (fahrenheit < 100) {
-  console.log(
-    `ice it's freezing! the temperature is ${fahrenheit.toFixed(
-      2
-    )} ${degreeSymbol}f`
-  );
-} else if (fahrenheit > 10) {
-  console.log(
-    `fire alert it's boiling the temperature is ${fahrenheit.toFixed(
-      2
-    )} ${degreeSymbol}f`
-  );
-} else {
-  console.log(
-    `the temperature is normal. the temperature ${fahrenheit.toFixed(
-      2
-    )}${degreeSymbol}f`
-  );
-}
+// const degreeSymbol = "\u00b0";
+// let celsius = 10;
+// let fahrenheit = ((celsius + 32) * 5) / 9;
+// if (fahrenheit < 100) {
+//   console.log(
+//     `ice it's freezing! the temperature is ${fahrenheit.toFixed(
+//       2
+//     )} ${degreeSymbol}f`
+//   );
+// } else if (fahrenheit > 10) {
+//   console.log(
+//     `fire alert it's boiling the temperature is ${fahrenheit.toFixed(
+//       2
+//     )} ${degreeSymbol}f`
+//   );
+// } else {
+//   console.log(
+//     `the temperature is normal. the temperature ${fahrenheit.toFixed(
+//       2
+//     )}${degreeSymbol}f`
+//   );
+// }
 
 //fizzbuzz
 // for (let i = 0; i <= 50; i++) {
@@ -341,3 +341,9 @@ if (fahrenheit < 100) {
 //   const [score1, score2, score3] = student.scores;
 //   console.log(generateReport(student.name, score1, score2, score3)); // Corrected to use student.name
 // });
+
+const logCase = (clientName, caseNumber) => {
+  return `case#${caseNumber}: ${clientName}'s case is now logged in`;
+};
+
+console.log(logCase("ali", 43242));
