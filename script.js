@@ -342,8 +342,19 @@
 //   console.log(generateReport(student.name, score1, score2, score3)); // Corrected to use student.name
 // });
 
-const logCase = (clientName, caseNumber) => {
-  return `case#${caseNumber}: ${clientName}'s case is now logged in`;
-};
+// const logCase = (clientName, caseNumber) => {
+//   return `case#${caseNumber}: ${clientName}'s case is now logged in`;
+// };
 
-console.log(logCase("ali", 43242));
+// console.log(logCase("ali", 43242));
+
+//fizzbuzz
+for (let i = 0; i <= 100; i++) {
+  if (i % 5 && i % 3 === 0) {
+    console.log("fizzbuzz");
+  } else if (i % 3 === 0) {
+    console.log("fizz");
+  } else if (i % 5 === 0) {
+    console.log("buzz");
+  }
+}
