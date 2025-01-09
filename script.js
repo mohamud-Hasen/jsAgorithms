@@ -41,28 +41,28 @@
 //   );
 // }
 
-// const degreeSymbol = "\u00b0";
-// let celsius = 10;
-// let fahrenheit = ((celsius + 32) * 5) / 9;
-// if (fahrenheit < 100) {
-//   console.log(
-//     `ice it's freezing! the temperature is ${fahrenheit.toFixed(
-//       2
-//     )} ${degreeSymbol}f`
-//   );
-// } else if (fahrenheit > 10) {
-//   console.log(
-//     `fire alert it's boiling the temperature is ${fahrenheit.toFixed(
-//       2
-//     )} ${degreeSymbol}f`
-//   );
-// } else {
-//   console.log(
-//     `the temperature is normal. the temperature ${fahrenheit.toFixed(
-//       2
-//     )}${degreeSymbol}f`
-//   );
-// }
+const degreeSymbol = "\u00b0";
+let celsius = 10;
+let fahrenheit = ((celsius + 32) * 5) / 9;
+if (fahrenheit < 100) {
+  console.log(
+    `ice it's freezing! the temperature is ${fahrenheit.toFixed(
+      2
+    )} ${degreeSymbol}f`
+  );
+} else if (fahrenheit > 10) {
+  console.log(
+    `fire alert it's boiling the temperature is ${fahrenheit.toFixed(
+      2
+    )} ${degreeSymbol}f`
+  );
+} else {
+  console.log(
+    `the temperature is normal. the temperature ${fahrenheit.toFixed(
+      2
+    )}${degreeSymbol}f`
+  );
+}
 
 //fizzbuzz
 // for (let i = 0; i <= 50; i++) {
@@ -237,31 +237,107 @@
 
 // console.log(logCase("ali", 32324));
 
-const calculateAverage = (score1, score2, score3) => {
-  return (score1 + score2 + score3) / 3;
-};
-const determineGrade = (average) => {
-  if (average >= 90) {
-    return "A";
-  } else if (average >= 80) {
-    return "B";
-  } else if (average >= 70) {
-    return "C";
-  } else {
-    return "F";
-  }
-};
+// const calculateAverage = (score1, score2, score3) => {
+//   return (score1 + score2 + score3) / 3;
+// };
 
-const generateReport = (studentName, score1, score2, score3) => {
-  const average = calculateAverage(score1, score2, score3);
-  const letterGrade = determineGrade(average);
-  return `${studentName} - average score: ${average.toFixed(
-    2
-  )}, Grade: ${letterGrade}`;
-};
-const studentName = "amina";
-const score1 = 85;
-const score2 = 90;
-const score3 = 78;
+// const determineGrade = (average) => {
+//   if (average >= 90) {
+//     return "A";
+//   } else if (average >= 80) {
+//     return "B";
+//   } else if (average >= 70) {
+//     return "C";
+//   } else {
+//     return "F";
+//   }
+// };
 
-console.log(generateReport(studentName, score1, score2, score3));
+// const generateReport = (studentName, score1, score2, score3) => {
+//   const average = calculateAverage(score1, score2, score3);
+//   const letterGrade = determineGrade(average);
+//   return `${studentName} - average score: ${average.toFixed(
+//     2
+//   )}, Grade: ${letterGrade}`;
+// };
+// const studentName = "amina";
+// const score1 = 85;
+// const score2 = 90;
+// const score3 = 78;
+
+// console.log(generateReport(studentName, score1, score2, score3));
+
+// const calculateAverage = (score1, score2, score3) => {
+//   return (score1 + score2 + score3) / 3;
+// };
+
+// const deternineGrade = (average) => {
+//   if (average >= 90) {
+//     return "A";
+//   } else if (average >= 80) {
+//     return "B";
+//   } else if (average >= 70) {
+//     return "C";
+//   } else {
+//     return "F";
+//   }
+// };
+// const generateReport = (studentName, score1, score2, score3) => {
+//   const average = calculateAverage(score1, score2, score3);
+//   const letterGrade = deternineGrade(average);
+//   return `${studentName} - average score: ${average.toFixed(
+//     2
+//   )} Grade: ${letterGrade}`;
+// };
+
+// const students = [
+//   { name: "Amina", scores: [90, 80, 70] },
+//   { name: "Mohamud", scores: [95, 80, 74] },
+//   { name: "Duraan", scores: [93, 83, 74] },
+//   { name: "Aisha", score: [90, 86, 74] },
+// ];
+
+// students.forEach((student) => {
+//   const [score1, score2, score3] = student.scores;
+//   console.log(generateReport(student.name, score1, score2, score3)); // Corrected to use student.name
+// });
+
+// Step 1: Function to calculate average
+// const calculateAverage = (score1, score2, score3) => {
+//   return (score1 + score2 + score3) / 3;
+// };
+
+// // Step 2: Function to determine the letter grade
+// const determineGrade = (average) => {
+//   if (average >= 90) {
+//     return "A";
+//   } else if (average >= 80) {
+//     return "B";
+//   } else if (average >= 70) {
+//     return "C";
+//   } else {
+//     return "F";
+//   }
+// };
+
+// // Step 3: Function to generate the full report for a single student
+// const generateReport = (studentName, score1, score2, score3) => {
+//   const average = calculateAverage(score1, score2, score3);
+//   const letterGrade = determineGrade(average);
+//   return `${studentName} - Average Score: ${average.toFixed(
+//     2
+//   )}, Grade: ${letterGrade}`;
+// };
+
+// // Step 4: Generate reports for multiple students
+// const students = [
+//   { name: "Amina", scores: [85, 90, 78] },
+//   { name: "Mohamud", scores: [95, 92, 93] },
+//   { name: "Aisha", scores: [70, 75, 74] },
+//   { name: "Abdullahi", scores: [50, 60, 64] },
+// ];
+
+// students.forEach((student) => {
+//   const [score1, score2, score3] = student.scores;
+//   console.log(generateReport(student.name, score1, score2, score3)); // Corrected to use student.name
+// });
