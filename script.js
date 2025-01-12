@@ -436,35 +436,37 @@
 // // Remove or comment this line for production
 // console.log(calculateLateFee(6));
 
-const calculateAverage = (score1, score2, score3) => {
-  return (score1 + score2 + score3) / 3;
-};
+// const calculateAverage = (score1, score2, score3) => {
+//   return (score1 + score2 + score3) / 3;
+// };
 
-const determineGrade = (average) => {};
-if (average >= 90) {
-  return "A";
-} else if (average >= 80) {
-  return "B";
-} else if (average >= 70) {
-  return "C";
-} else {
-  return "F";
-}
+// const determineGrade = (average) => {};
+// if (average >= 90) {
+//   return "A";
+// } else if (average >= 80) {
+//   return "B";
+// } else if (average >= 70) {
+//   return "C";
+// } else {
+//   return "F";
+// }
 
-const generateReport = (studentName, score1, score2, score3) => {
-  const average = calculateAverage(score1, score2, score3);
-  const letterGrade = determineGrade(average);
-  return `${studentName} - average score:${average.toFixed(
-    2
-  )}, Grade: ${letterGrade}`;
-};
-const students = [
-  { name: "amina", score: [score1, score2, score3] },
-  { name: "ali", score: [score1, score2, score3] },
-  { name: "mohamud", score: [score1, score2, score3] },
-];
+// const generateReport = (studentName, score1, score2, score3) => {
+//   const average = calculateAverage(score1, score2, score3);
+//   const letterGrade = determineGrade(average);
+//   return `${studentName} - average score:${average.toFixed(
+//     2
+//   )}, Grade: ${letterGrade}`;
+// };
+// const students = [
+//   { name: "amina", score: [score1, score2, score3] },
+//   { name: "ali", score: [score1, score2, score3] },
+//   { name: "mohamud", score: [score1, score2, score3] },
+// ];
 
-students.forEach((student) => {
-  const [score1, score2, score3] = student.score;
-  console.log(generateReport(student.name, score1, score2, score3));
-});
+// students.forEach((student) => {
+//   const [score1, score2, score3] = student.score;
+//   console.log(generateReport(student.name, score1, score2, score3));
+// });
+const fruits = ["banana", "orange", "apple", "grape"];
+console.log(fruits.length);
