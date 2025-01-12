@@ -469,4 +469,14 @@
 //   console.log(generateReport(student.name, score1, score2, score3));
 // });
 const fruits = ["banana", "orange", "apple", "grape"];
-console.log(fruits.length);
+//console.log(fruits.length);
+
+const students = ["Ali", "Fatima", "Hassan", "Layla"];
+const isPresent = (name) => {
+  if (students.includes(name)) {
+    return `${name} is present`;
+  } else {
+    return `${name} is absent`;
+  }
+};
+console.log(isPresent("amina"));
