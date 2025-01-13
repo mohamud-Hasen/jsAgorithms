@@ -601,17 +601,111 @@
 // updateOnlinStatus(gameProfile, true);
 // updateOnlinStatus(gameProfile, false);
 
-const dress = {
-  name: "evening gown",
-  size: "Medium",
-  inSock: false,
+// const dress = {
+//   name: "evening gown",
+//   size: "Medium",
+//   inSock: false,
+// };
+
+// const checkAvailability = (dress) => {
+//   if (dress.this) {
+//     console.log(`${dress.name} is available in size ${dress.size}.`);
+//   } else {
+//     console.log(`${dress.name} is out of stock.`);
+//   }
+// };
+// checkAvailability(dress);
+
+// const supercar = {
+//   model: "ferrari sf90",
+//   price: 500000,
+//   features: {
+//     color: "red",
+//   },
+// };
+
+// const addFeature = (car, featureName) => {
+//   car.features[featureName] = true;
+//   console.log(
+//     `${
+//       featureName.charAt[0].toUpperCase + featureName.slice[1]
+//     } has been added to ${car.model}`
+//   );
+// };
+
+// const logFeatures = (car) => {
+//   console.log("featues:");
+//   for (const feature of car.features) {
+//     console.log(`${feature}: ${car.features[feature]}`);
+//   }
+// };
+// addFeature(supercar, "turbo");
+// logFeatures(supercar);
+// Step 1: Create the supercar object
+// const supercar = {
+//   model: "Ferrari SF90",
+//   price: 500000,
+//   features: {
+//     color: "Red",
+//   },
+// };
+
+// // Step 2: Define the addFeature function
+// const addFeature = (car, featureName) => {
+//   car.features[featureName] = true; // Add the feature to the features object
+//   console.log(
+//     `${
+//       featureName.charAt(0).toUpperCase() + featureName.slice(1)
+//     } has been added to ${car.model}.`
+//   );
+// };
+
+// // Step 3: Use a for...in loop to log all the features of the supercar
+// const logFeatures = (car) => {
+//   console.log("Features:");
+//   for (const feature in car.features) {
+//     console.log(`- ${feature}: ${car.features[feature]}`);
+//   }
+// };
+
+// // Example Usage:
+// addFeature(supercar, "turbo");
+// logFeatures(supercar);
+
+// Step 1: Create the supercar object
+const supercar = {
+  model: "Ferrari SF90",
+  price: 500000,
+  features: {
+    color: "Red",
+  },
 };
 
-const checkAvailability = (dress) => {
-  if (dress.inSock) {
-    console.log(`${dress.name} is available in size ${dress.size}.`);
-  } else {
-    console.log(`${dress.name} is out of stock.`);
+// Step 2: Define the addFeature function
+const addFeature = (car, featureName) => {
+  if (!featureName || typeof featureName !== "string") {
+    console.error("Invalid feature name. Please provide a valid string.");
+    return;
+  }
+
+  car.features[featureName] = true; // Add the feature to the features object
+  console.log(
+    `${
+      featureName.charAt(0).toUpperCase() + featureName.slice(1)
+    } has been added to ${car.model}.`
+  );
+};
+
+// Step 3: Use a for...in loop to log all the features of the supercar
+const logFeatures = (car) => {
+  console.log("Features:");
+  for (const feature in car.features) {
+    console.log(`- ${feature}: ${car.features[feature]}`);
   }
 };
-checkAvailability(dress);
+
+// Example Usage:
+addFeature(supercar, "turbo"); // Adds the "turbo" feature
+logFeatures(supercar);
+
+//addFeature(supercar, ""); // Triggers the error handling for invalid feature name
