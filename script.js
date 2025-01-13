@@ -491,23 +491,39 @@
 // };
 // console.log(isPresent("grape"));
 
-const countries = [
-  { name: "United States", population: 400000000, location: "america" },
-  { name: "Nigeria", population: 200000000, location: "Africa" },
-  { name: "Brazil", population: 100000000, location: "sout america" },
-  { name: "Ethiopia", population: 120000000, location: "africa" },
-  { name: "south africa", population: 60000000, location: "africa" },
-  { name: "canada", population: 40000000, location: "america" },
-];
+// const countries = [
+//   { name: "United States", population: 400000000, location: "america" },
+//   { name: "Nigeria", population: 200000000, location: "Africa" },
+//   { name: "Brazil", population: 100000000, location: "sout america" },
+//   { name: "Ethiopia", population: 120000000, location: "africa" },
+//   { name: "south africa", population: 60000000, location: "africa" },
+//   { name: "canada", population: 40000000, location: "america" },
+// ];
 
-const bigCountries = [];
-const smallCountries = [];
-for (let i = 0; i < countries.length; i++) {
-  if (countries[i].population > 100000000) {
-    bigCountries.push(countries[i]);
-  } else {
-    smallCountries.push(countries[i]);
-  }
+// const bigCountries = [];
+// const smallCountries = [];
+// for (let i = 0; i < countries.length; i++) {
+//   if (countries[i].population > 100000000) {
+//     bigCountries.push(countries[i]);
+//   } else {
+//     smallCountries.push(countries[i]);
+
+//   }
+// }
+// console.log(smallCountries);
+// console.log(bigCountries);
+
+const degreeSymbol = "\u00b0";
+const fahrenheit = 2;
+const celsious = ((fahrenheit - 32) * 5) / 9;
+if (celsious < 10) {
+  console.log(
+    `it is freezing! the temperature is${celsious.toFixed(2)} ${degreeSymbol}f`
+  );
+} else if (celsious > 100) {
+  console.log(
+    `fire alert! the tempreture is ${celsious.toFixed(2)} ${degreeSymbol}f`
+  );
+} else {
+  console.log("the tempreture is normal today");
 }
-console.log(smallCountries);
-console.log(bigCountries);
