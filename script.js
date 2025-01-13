@@ -673,39 +673,67 @@
 // logFeatures(supercar);
 
 // Step 1: Create the supercar object
-const supercar = {
-  model: "Ferrari SF90",
-  price: 500000,
-  features: {
-    color: "Red",
-  },
-};
+// const supercar = {
+//   model: "Ferrari SF90",
+//   price: 500000,
+//   features: {
+//     color: "Red",
+//   },
+// };
 
-// Step 2: Define the addFeature function
-const addFeature = (car, featureName) => {
-  if (!featureName || typeof featureName !== "string") {
-    console.error("Invalid feature name. Please provide a valid string.");
-    return;
-  }
+// // Step 2: Define the addFeature function
+// const addFeature = (car, featureName) => {
+//   if (!featureName || typeof featureName !== "string") {
+//     console.error("Invalid feature name. Please provide a valid string.");
+//     return;
+//   }
 
-  car.features[featureName] = true; // Add the feature to the features object
-  console.log(
-    `${
-      featureName.charAt(0).toUpperCase() + featureName.slice(1)
-    } has been added to ${car.model}.`
-  );
-};
+//   car.features[featureName] = true; // Add the feature to the features object
+//   console.log(
+//     `${
+//       featureName.charAt(0).toUpperCase() + featureName.slice(1)
+//     } has been added to ${car.model}.`
+//   );
+// };
 
-// Step 3: Use a for...in loop to log all the features of the supercar
-const logFeatures = (car) => {
-  console.log("Features:");
-  for (const feature in car.features) {
-    console.log(`- ${feature}: ${car.features[feature]}`);
-  }
-};
+// // Step 3: Use a for...in loop to log all the features of the supercar
+// const logFeatures = (car) => {
+//   console.log("Features:");
+//   for (const feature in car.features) {
+//     console.log(`- ${feature}: ${car.features[feature]}`);
+//   }
+// };
 
-// Example Usage:
-addFeature(supercar, "turbo"); // Adds the "turbo" feature
-logFeatures(supercar);
+// // Example Usage:
+// addFeature(supercar, "turbo"); // Adds the "turbo" feature
+// logFeatures(supercar);
 
 //addFeature(supercar, ""); // Triggers the error handling for invalid feature name
+
+// const sendMessage = (userName, callback) => {
+//   return callback(userName);
+// };
+
+// const welcomeMessage = (name) => {
+//   return `welcome to ${name}`;
+// };
+// console.log(sendMessage("amina", welcomeMessage));
+
+const degreeSymbol = "\u00b0";
+const evaluateTempreture = (tempreture) => {
+  if (tempreture > 30) {
+    console.log(`${tempreture}${degreeSymbol}c is hot.`);
+  } else if (tempreture >= 15 && tempreture <= 30) {
+    console.log(`${tempreture}${degreeSymbol}c is warm.`);
+  } else if (tempreture < 15) {
+    console.log(`${tempreture}${degreeSymbol}c is cold.`);
+  }
+};
+
+const checkTempreture = (temp, callback) => {
+  return callback(temp);
+};
+
+checkTempreture(35, evaluateTempreture);
+checkTempreture(22, evaluateTempreture);
+checkTempreture(10, evaluateTempreture);
