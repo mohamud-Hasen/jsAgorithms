@@ -584,19 +584,34 @@
 
 // printLeaderboard();
 
-const gameProfile = {
-  userName: "shadowslayer",
-  level: 5,
-  isOnline: false,
+// const gameProfile = {
+//   userName: "shadowslayer",
+//   level: 5,
+//   isOnline: false,
+// };
+
+// const updateOnlinStatus = (profile, status) => {
+//   profile.this = status;
+//   if (status) {
+//     console.log(`${profile.userName} is now online`);
+//   } else {
+//     console.log(`${profile.userName} is now offline`);
+//   }
+// };
+// updateOnlinStatus(gameProfile, true);
+// updateOnlinStatus(gameProfile, false);
+
+const dress = {
+  name: "evening gown",
+  size: "Medium",
+  inSock: false,
 };
 
-const updateOnlinStatus = (profile, status) => {
-  profile.isOnline = status;
-  if (status) {
-    console.log(`${profile.userName} is now online`);
+const checkAvailability = (dress) => {
+  if (dress.inSock) {
+    console.log(`${dress.name} is available in size ${dress.size}.`);
   } else {
-    console.log(`${profile.userName} is now offline`);
+    console.log(`${dress.name} is out of stock.`);
   }
 };
-updateOnlinStatus(gameProfile, true);
-updateOnlinStatus(gameProfile, false);
+checkAvailability(dress);
