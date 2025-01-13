@@ -559,26 +559,44 @@
 //     console.log("invalid day");
 // }
 
-const topScorers = [
-  { name: "Messi", score: 5 },
-  { name: "Ronaldo", score: 3 },
-  { name: "Neymar", score: 4 },
-];
+// const topScorers = [
+//   { name: "Messi", score: 5 },
+//   { name: "Ronaldo", score: 8 },
+//   { name: "Neymar", score: 4 },
+// ];
 
-const updateScore = (playerName, scoreToAdd) => {
-  const player = topScorers.find((player) => player.name === playerName);
-  if (player) {
-    player.score += scoreToAdd;
+// const updateScore = (playerName, scoreToAdd) => {
+//   const player = topScorers.find((player) => player.name === playerName);
+//   if (player) {
+//     player.score += scoreToAdd;
+//   } else {
+//     topScorers.push({ name: playerName, score: scoreToAdd });
+//   }
+// };
+
+// const printLeaderboard = () => {
+//   topScorers.sort((a, b) => b.score - a.score);
+//   console.log("printLeaderboard");
+//   topScorers.forEach((player, Rank) => {
+//     console.log(`${Rank + 1}. ${player.name} - ${player.score} points`);
+//   });
+// };
+
+// printLeaderboard();
+
+const gameProfile = {
+  userName: "shadowslayer",
+  level: 5,
+  isOnline: false,
+};
+
+const updateOnlinStatus = (profile, status) => {
+  profile.isOnline = status;
+  if (status) {
+    console.log(`${profile.userName} is now online`);
   } else {
-    topScorers.push({ name: playerName, score: scoreToAdd });
+    console.log(`${profile.userName} is now offline`);
   }
 };
-
-const printLeaderboard = () => {
-  topScorers.sort((a, b) => b.score - a.score);
-  console.log("printLeaderboard");
-  topScorers.forEach((player, Rank) => {
-    console.log(`${Rank + 1}. ${player.name} - ${player.score} points`);
-  });
-};
-printLeaderboard();
+updateOnlinStatus(gameProfile, true);
+updateOnlinStatus(gameProfile, false);
