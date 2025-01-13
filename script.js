@@ -481,12 +481,33 @@
 // };
 // console.log(isPresent("amina"));
 
-const fruits = ["banana", "orange", "apple", "grape"];
-const isPresent = (name) => {
-  if (fruits.includes(name)) {
-    return `${name} is present`;
+// const fruits = ["banana", "orange", "apple", "grape"];
+// const isPresent = (name) => {
+//   if (fruits.includes(name)) {
+//     return `${name} is present`;
+//   } else {
+//     `${name} is absent`;
+//   }
+// };
+// console.log(isPresent("grape"));
+
+const countries = [
+  { name: "United States", population: 400000000, location: "america" },
+  { name: "Nigeria", population: 200000000, location: "Africa" },
+  { name: "Brazil", population: 100000000, location: "sout america" },
+  { name: "Ethiopia", population: 120000000, location: "africa" },
+  { name: "south africa", population: 60000000, location: "africa" },
+  { name: "canada", population: 40000000, location: "america" },
+];
+
+const bigCountries = [];
+const smallCountries = [];
+for (let i = 0; i < countries.length; i++) {
+  if (countries[i].population > 100000000) {
+    bigCountries.push(countries[i]);
   } else {
-    `${name} is absent`;
+    smallCountries.push(countries[i]);
   }
-};
-console.log(isPresent("grape"));
+}
+console.log(smallCountries);
+console.log(bigCountries);
