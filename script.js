@@ -513,17 +513,72 @@
 // console.log(smallCountries);
 // console.log(bigCountries);
 
-const degreeSymbol = "\u00b0";
-const fahrenheit = 2;
-const celsious = ((fahrenheit - 32) * 5) / 9;
-if (celsious < 10) {
-  console.log(
-    `it is freezing! the temperature is${celsious.toFixed(2)} ${degreeSymbol}f`
-  );
-} else if (celsious > 100) {
-  console.log(
-    `fire alert! the tempreture is ${celsious.toFixed(2)} ${degreeSymbol}f`
-  );
-} else {
-  console.log("the tempreture is normal today");
-}
+// const degreeSymbol = "\u00b0";
+// const fahrenheit = 2;
+// const celsious = ((fahrenheit - 32) * 5) / 9;
+// if (celsious < 10) {
+//   console.log(
+//     `it is freezing! the temperature is${celsious.toFixed(2)} ${degreeSymbol}f`
+//   );
+// } else if (celsious > 100) {
+//   console.log(
+//     `fire alert! the tempreture is ${celsious.toFixed(2)} ${degreeSymbol}f`
+//   );
+// } else {
+//   console.log("the tempreture is normal today");
+// }
+
+// const day = 7;
+// switch (day) {
+//   case 1:
+//     console.log("monday");
+//     break;
+
+//   case 2:
+//     console.log("Tuesday");
+//     break;
+
+//   case 3:
+//     console.log("Wednesday");
+//     break;
+//   case 4:
+//     console.log("Thursday");
+//     break;
+
+//   case 5:
+//     console.log("Friday");
+//     break;
+//   case 6:
+//     console.log("Saturday");
+//     break;
+//   case 7:
+//     console.log("Sun");
+//     break;
+
+//   default:
+//     console.log("invalid day");
+// }
+
+const topScorers = [
+  { name: "Messi", score: 5 },
+  { name: "Ronaldo", score: 3 },
+  { name: "Neymar", score: 4 },
+];
+
+const updateScore = (playerName, scoreToAdd) => {
+  const player = topScorers.find((player) => player.name === playerName);
+  if (player) {
+    player.score += scoreToAdd;
+  } else {
+    topScorers.push({ name: playerName, score: scoreToAdd });
+  }
+};
+
+const printLeaderboard = () => {
+  topScorers.sort((a, b) => b.score - a.score);
+  console.log("printLeaderboard");
+  topScorers.forEach((player, Rank) => {
+    console.log(`${Rank + 1}. ${player.name} - ${player.score} points`);
+  });
+};
+printLeaderboard();
