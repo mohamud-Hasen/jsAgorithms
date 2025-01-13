@@ -468,15 +468,25 @@
 //   const [score1, score2, score3] = student.score;
 //   console.log(generateReport(student.name, score1, score2, score3));
 // });
-const fruits = ["banana", "orange", "apple", "grape"];
-//console.log(fruits.length);
+// const fruits = ["banana", "orange", "apple", "grape"];
+// //console.log(fruits.length);
 
-const students = ["Ali", "Fatima", "Hassan", "Layla"];
+// const students = ["Ali", "Fatima", "Hassan", "Layla"];
+// const isPresent = (name) => {
+//   if (students.includes(name)) {
+//     return `${name} is present`;
+//   } else {
+//     return `${name} is absent`;
+//   }
+// };
+// console.log(isPresent("amina"));
+
+const fruits = ["banana", "orange", "apple", "grape"];
 const isPresent = (name) => {
-  if (students.includes(name)) {
+  if (fruits.includes(name)) {
     return `${name} is present`;
   } else {
-    return `${name} is absent`;
+    `${name} is absent`;
   }
 };
-console.log(isPresent("amina"));
+console.log(isPresent("grape"));
