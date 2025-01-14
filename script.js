@@ -737,3 +737,4 @@ const checkTempreture = (temp, callback) => {
 checkTempreture(35, evaluateTempreture);
 checkTempreture(22, evaluateTempreture);
 checkTempreture(10, evaluateTempreture);
+checkTempreture(40, evaluateTempreture);
