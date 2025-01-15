@@ -719,22 +719,38 @@
 // };
 // console.log(sendMessage("amina", welcomeMessage));
 
-const degreeSymbol = "\u00b0";
-const evaluateTempreture = (tempreture) => {
-  if (tempreture > 30) {
-    console.log(`${tempreture}${degreeSymbol}c is hot.`);
-  } else if (tempreture >= 15 && tempreture <= 30) {
-    console.log(`${tempreture}${degreeSymbol}c is warm.`);
-  } else if (tempreture < 15) {
-    console.log(`${tempreture}${degreeSymbol}c is cold.`);
+// const degreeSymbol = "\u00b0";
+// const evaluateTempreture = (tempreture) => {
+//   if (tempreture > 30) {
+//     console.log(`${tempreture}${degreeSymbol}c is hot.`);
+//   } else if (tempreture >= 15 && tempreture <= 30) {
+//     console.log(`${tempreture}${degreeSymbol}c is warm.`);
+//   } else if (tempreture < 15) {
+//     console.log(`${tempreture}${degreeSymbol}c is cold.`);
+//   }
+// };
+
+// const checkTempreture = (temp, callback) => {
+//   return callback(temp);
+// };
+
+// checkTempreture(35, evaluateTempreture);
+// checkTempreture(22, evaluateTempreture);
+// checkTempreture(10, evaluateTempreture);
+// checkTempreture(40, evaluateTempreture);
+
+const gameProfile = {
+  userName: "shadowslayr",
+  level: 5,
+  isOnline: true,
+};
+const updateOnlineStatus = (profile, status) => {
+  profile.isOnline = status;
+  if (status) {
+    console.log(`${profile.userName} is now online`);
+  } else {
+    console.log(`${profile.userName} is now offline`);
   }
 };
-
-const checkTempreture = (temp, callback) => {
-  return callback(temp);
-};
-
-checkTempreture(35, evaluateTempreture);
-checkTempreture(22, evaluateTempreture);
-checkTempreture(10, evaluateTempreture);
-checkTempreture(40, evaluateTempreture);
+updateOnlineStatus(gameProfile, false);
+updateOnlineStatus(gameProfile, true);
