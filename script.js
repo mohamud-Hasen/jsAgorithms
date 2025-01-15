@@ -739,18 +739,28 @@
 // checkTempreture(10, evaluateTempreture);
 // checkTempreture(40, evaluateTempreture);
 
-const gameProfile = {
-  userName: "shadowslayr",
-  level: 5,
-  isOnline: true,
-};
-const updateOnlineStatus = (profile, status) => {
-  profile.isOnline = status;
-  if (status) {
-    console.log(`${profile.userName} is now online`);
+// const gameProfile = {
+//   userName: "shadowslayr",
+//   level: 5,
+//   isOnline: true,
+// };
+// const updateOnlineStatus = (profile, status) => {
+//   profile.isOnline = status;
+//   if (status) {
+//     console.log(`${profile.userName} is now online`);
+//   } else {
+//     console.log(`${profile.userName} is now offline`);
+//   }
+// };
+// updateOnlineStatus(gameProfile, false);
+// updateOnlineStatus(gameProfile, true);
+
+const degreeSymbol = "\u00b0";
+const calculateTempreture = (tempreture) => {
+  if (tempreture > 30) {
+    console.log(`${tempreture}${degreeSymbol}c the temperature is normal`);
   } else {
-    console.log(`${profile.userName} is now offline`);
+    console.log(`${tempreture}${degreeSymbol}c the tempreture is cold`);
   }
 };
-updateOnlineStatus(gameProfile, false);
-updateOnlineStatus(gameProfile, true);
+calculateTempreture(35);
