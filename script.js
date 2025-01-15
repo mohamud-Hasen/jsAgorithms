@@ -755,6 +755,16 @@
 // updateOnlineStatus(gameProfile, false);
 // updateOnlineStatus(gameProfile, true);
 
+// const degreeSymbol = "\u00b0";
+// const calculateTempreture = (tempreture) => {
+//   if (tempreture > 30) {
+//     console.log(`${tempreture}${degreeSymbol}c the temperature is normal`);
+//   } else {
+//     console.log(`${tempreture}${degreeSymbol}c the tempreture is cold`);
+//   }
+// };
+// calculateTempreture(35);
+
 const degreeSymbol = "\u00b0";
 const calculateTempreture = (tempreture) => {
   if (tempreture > 30) {
@@ -763,4 +773,4 @@ const calculateTempreture = (tempreture) => {
     console.log(`${tempreture}${degreeSymbol}c the tempreture is cold`);
   }
 };
-calculateTempreture(35);
+calculateTempreture(40);
