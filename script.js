@@ -765,12 +765,28 @@
 // };
 // calculateTempreture(35);
 
-const degreeSymbol = "\u00b0";
-const calculateTempreture = (tempreture) => {
-  if (tempreture > 30) {
-    console.log(`${tempreture}${degreeSymbol}c the temperature is normal`);
+// const degreeSymbol = "\u00b0";
+// const calculateTempreture = (tempreture) => {
+//   if (tempreture > 30) {
+//     console.log(`${tempreture}${degreeSymbol}c the temperature is normal`);
+//   } else {
+//     console.log(`${tempreture}${degreeSymbol}c the tempreture is cold`);
+//   }
+// };
+// calculateTempreture(40);
+
+const gameProfile = {
+  userName: "seemore",
+  level: 5,
+  isOnline: false,
+};
+
+const updateOnlineStatus = (profile, status) => {
+  profile.isOnline = status;
+  if (status) {
+    console.log(`${profile.userName} is now online`);
   } else {
-    console.log(`${tempreture}${degreeSymbol}c the tempreture is cold`);
+    console.log(`${profile.userName} is now online`);
   }
 };
-calculateTempreture(40);
+updateOnlineStatus(gameProfile);
