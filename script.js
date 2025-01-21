@@ -815,30 +815,40 @@ const posts = [
 
 // createPost({ title: "post three", body: "this is post three" }, getPosts);
 
-function getPosts() {
-  setTimeout(() => {
-    let output = "";
-    posts.forEach((post, index) => {
-      output = `<li>${post.title}</>`;
-    });
-    document.body.innerHTML = output;
-  }, 1000);
-}
+// function getPosts() {
+//   setTimeout(() => {
+//     let output = "";
+//     posts.forEach((post, index) => {
+//       output = `<li>${post.title}</>`;
+//     });
+//     document.body.innerHTML = output;
+//   }, 1000);
+// }
 
-function createPost(post) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      posts.push(post);
-      const error = true;
-      if (!error) {
-        resolve();
-      } else {
-        reject("error: something went wrong");
-      }
-    }, 2000);
-  });
-}
+// function createPost(post) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       posts.push(post);
+//       const error = true;
+//       if (!error) {
+//         resolve();
+//       } else {
+//         reject("error: something went wrong");
+//       }
+//     }, 2000);
+//   });
+// }
 
-createPost({ title: "post three", body: "this is post three" })
-  .then(getPosts)
-  .catch((err) => console.log(err));
+// createPost({ title: "post three", body: "this is post three" })
+//   .then(getPosts)
+//   .catch((err) => console.log(err));
+
+for (let i = 0; i <= 50; i++) {
+  if (i % 5 === 0) {
+    console.log("fizz");
+  } else if (i % 3 === 0) {
+    console.log("buzz");
+  } else {
+    console.log("fizzbuzz");
+  }
+}
