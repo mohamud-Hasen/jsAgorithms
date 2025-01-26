@@ -853,11 +853,71 @@ const posts = [
 //   }
 // }
 
-let feeling = "tired";
-if (feeling === "happy") {
-  console.log("I'm glad that you are happy");
-} else if (feeling === "sad") {
-  console.log("sorry brother I hope that you will get better soon");
-} else if (feeling === "tired") {
-  console.log("you need to take a break");
-}
+// let feeling = "tired";
+// if (feeling === "happy") {
+//   console.log("I'm glad that you are happy");
+// } else if (feeling === "sad") {
+//   console.log("sorry brother I hope that you will get better soon");
+// } else if (feeling === "tired") {
+//   console.log("you need to take a break");
+// }
+
+// const topScorers = [
+//   { name: "Messi", score: 5 },
+//   { name: "Ronaldo", score: 8 },
+//   { name: "Neymar", score: 4 },
+// ];
+
+// const updateScore = (playerName, scoreToAdd) => {
+//   const player = topScorers.find((player) => player.name === playerName);
+//   if (player) {
+//     player.score += scoreToAdd;
+//   } else {
+//     topScorers.push({ name: playerName, score: scoreToAdd });
+//   }
+// };
+
+// const printLeaderboard = () => {
+//   topScorers.sort((a, b) => b.score - a.score);
+//   console.log("printLeaderboard");
+//   topScorers.forEach((player, Rank) => {
+//     console.log(`${Rank + 1}. ${player.name} - ${player.score} points`);
+//   });
+// };
+
+// printLeaderboard();
+
+// const gameProfile = {
+//   userName: "shadowslayer",
+//   level: 5,
+//   isOnline: false,
+// };
+
+const topScorers = [
+  { name: "Messi", score: 5 },
+  { name: "Ronaldo", score: 8 },
+  { name: "Neymar", score: 4 },
+];
+
+const updateScore = (playerName, addScore) => {
+  const player = topScorers.find((player) => player.name === playerName);
+  if (player) {
+    player.score += addScore;
+  } else {
+    topScorers.push({ name: player.name, score: addScore });
+  }
+};
+
+const printLeaderboard = () => {
+  topScorers.sort((a, b) => b.score - a.score);
+  console.log(printLeaderboard);
+  topScorers.forEach((player, Rank) => {
+    console.log(`${Rank + 1} ${player.name} ${player.score} points`);
+  });
+};
+printLeaderboard();
+const gameProfile = {
+  userName: "shadowPlayer",
+  level: 5,
+  isOnline: true,
+};
